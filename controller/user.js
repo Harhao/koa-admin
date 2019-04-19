@@ -6,10 +6,11 @@ module.exports = {
         let { name, password } = ctx.request.body;
         if (!name || !password) {
             password = util.crateHash(password);
-            const result = userModel.save({
-                name: name,
-                password: password
+            const user = new userModel({
+                name:name,
+                password:password
             });
+            const result = user.save();
             if (!result)
                 return ctx.body = {
                     code: '400',
