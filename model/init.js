@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const mongoUrl = require("../config/index").mongoUrl;
-function connectDB(){
-  mongoose.connect(mongoUrl, { useNewUrlParser: true,useCreateIndex: true});
+function connectDB() {
+  mongoose.connect(mongoUrl, { useNewUrlParser: true, useCreateIndex: true });
 }
 exports.connect = () => {
   connectDB();

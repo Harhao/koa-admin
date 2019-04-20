@@ -51,5 +51,10 @@ module.exports = {
         message: "usernumber or password is error"
       });
     }
+  },
+  getuserinfo: async (ctx, next) => {
+    return ctx.body = {
+      msg:'nothing'
+    }
   }
 };
