@@ -31,7 +31,7 @@ app.use(
   koaJwt({
     secret: config.secret
   }).unless({
-    path: [/\/login/, /\/register/]
+    path: [/^\/login/, /^\/register/]
   })
 );
 (async () => {
