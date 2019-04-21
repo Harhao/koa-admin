@@ -19,7 +19,7 @@ module.exports = {
   },
   verify(authoration) {
     if (!authoration)
-      return jwt.verifya(authoration.split(" ")[1], config.secret);
+      return jwt.verify(authoration.split(" ")[1], config.secret);
     return null;
   }
 };
