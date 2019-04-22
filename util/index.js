@@ -17,9 +17,14 @@ module.exports = {
       config.expiresIn
     );
   },
-  verify(authoration) {
-    if (!authoration)
-      return jwt.verify(authoration.split(" ")[1], config.secret);
-    return null;
+  verify(ctx, decodedToken, token) {
+    let ret = true;
+    try {
+      const payload = jwt.verify(token, config.secret);
+      ret = false;
+    } catch (err) {
+      console.log(err.name);
+    }
+    return ret;
   }
 };

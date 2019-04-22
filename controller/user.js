@@ -54,7 +54,7 @@ module.exports = {
   },
   getuserinfo: async (ctx, next) => {
     return ctx.body = {
-      msg:'nothing'
+      msg: 'nothing'
     }
   }
 };
