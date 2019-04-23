@@ -27,15 +27,15 @@ app.use(async (ctx, next) => {
   console.log(`${ctx.method} ${ctx.url} - ${ms}ms`);
 });
 app.use(errorHandle);
-app.use(router.routes(), router.allowedMethods());
 app.use(
   koaJwt({
     secret: config.secret,
     isRevoked: util.verify
   }).unless({
-    path: [/\/login\//, /\/register\//]
+    path: [/\/login/, /\/register/]
   })
 );
+app.use(router.routes(), router.allowedMethods());
 (async () => {
   await connect();
 })();

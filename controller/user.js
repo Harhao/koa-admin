@@ -3,6 +3,7 @@ const config = require("../config/index.js");
 const util = require("../util/index");
 module.exports = {
   register: async (ctx, next) => {
+    console.log("****",ctx);
     let { name, password } = ctx.request.body;
     if (name && password) {
       password = util.createHash(password);
