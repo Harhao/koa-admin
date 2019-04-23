@@ -55,3 +55,15 @@
           error.js (koa-jwt提供权限访问文件)
           index.js (工具类函数，jwt分发token和verify)
 ```
+### 使用方法
+
+- 下载项目文件并进入项目文件根目录，在命令终端输入:
+
+```bash
+  npm install
+```
+- 运行本地的mongodb数据库之后，启动项目文件:
+
+```bash
+  npm start
+```
