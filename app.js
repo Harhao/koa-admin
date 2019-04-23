@@ -9,6 +9,7 @@ const router = require("./routes/index");
 const config = require("./config/index");
 const util = require("./util/index");
 const errorHandle = require("./util/error.js");
+const filterApi = require("./config/filterApi");
 const { connect } = require("./model/init");
 onerror(app);
 
@@ -32,7 +33,7 @@ app.use(
     secret: config.secret,
     isRevoked: util.verify
   }).unless({
-    path: [/\/login/, /\/register/]
+    path: [...filterApi]
   })
 );
 app.use(router.routes(), router.allowedMethods());
