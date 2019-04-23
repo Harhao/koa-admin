@@ -7,8 +7,8 @@ const logger = require("koa-logger");
 const koaJwt = require("koa-jwt");
 const router = require("./routes/index");
 const config = require("./config/index");
-const util = require('../config/index');
-const errorHandle = require('./util/error.js');
+const util = require("./util/index");
+const errorHandle = require("./util/error.js");
 const { connect } = require("./model/init");
 onerror(app);
 
@@ -31,9 +31,9 @@ app.use(router.routes(), router.allowedMethods());
 app.use(
   koaJwt({
     secret: config.secret,
-    isRevoked:util.verify
+    isRevoked: util.verify
   }).unless({
-    path: [/^\/login/, /^\/register/]
+    path: [/\/login\//, /\/register\//]
   })
 );
 (async () => {
