@@ -1,6 +1,7 @@
 # koa-admin
 基于Koa2开发的电商平台管理系统
-> 开发环境： window 10(VSCode)<br/>
+> 开发环境： window 10 <br/>
+  编程软件：VSCode
   技术栈：koa2 Vue2 <br/>
   数据库：MongoDB
 
