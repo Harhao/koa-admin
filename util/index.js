@@ -21,9 +21,7 @@ module.exports = {
     let ret = true;
     try {
       const payload = jwt.verify(token, config.secret);
-      console.log(payload);
-      if (payload)
-        ret = false;
+      if (payload) ret = false;
     } catch (err) {
       console.log(err.name);
     }

@@ -3,13 +3,13 @@ const config = require("../config/index.js");
 const util = require("../util/index");
 module.exports = {
   register: async (ctx, next) => {
-    console.log("****",ctx);
-    let { name, password } = ctx.request.body;
+    let { name, password, phone } = ctx.request.body;
     if (name && password) {
       password = util.createHash(password);
       const result = await new userModel({
         name: name,
-        password: password
+        password: password,
+        phone: phone
       }).save();
       console.log("register result is", result);
       if (!result)
@@ -54,8 +54,21 @@ module.exports = {
     }
   },
   getuserinfo: async (ctx, next) => {
-    return (ctx.body = {
-      msg: "nothing"
-    });
+    const { name } = ctx.request.query;
+    console.log("name is",name);
+    if (name) {
+      const result = await userModel.findOne({
+        name: name
+      });
+      console.log(result);
+      result
+        ? (ctx.body = { code: 200, data: result, message: "ok" })
+        : (ctx.body = { code: 200, data: null, message: "ok" });
+    } else {
+      ctx.body = {
+        code: 400,
+        message: "name is null"
+      };
+    }
   }
 };
