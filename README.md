@@ -5,7 +5,7 @@
   技术栈：koa2 Vue2 <br/>
   数据库：MongoDB
 
-### 项目目录结构
+## 项目目录结构
 
 ```bash
   │  .gitignore(git忽略提交定义文件)
@@ -56,7 +56,7 @@
           error.js (koa-jwt提供权限访问文件)
           index.js (工具类函数，jwt分发token和verify)
 ```
-### 使用方法
+## 使用方法
 
 - 下载项目文件并进入项目文件根目录，在命令终端输入:
 
