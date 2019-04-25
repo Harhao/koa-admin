@@ -2,9 +2,9 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 // const ObjectId = Schema.Types.ObjectId;
 const userSchema = new Schema({
-  // _id: {
-  //   type: ObjectId
-  // },
+  uid: {
+    type: ObjectId
+  },
   name: {
     unique: true,
     type: String
@@ -17,14 +17,25 @@ const userSchema = new Schema({
     type: String,
     default: ""
   },
-  password: String,
+  password: {
+    type: String,
+    default: ''
+  },
   createAt: {
+    type: Date,
+    default: Date.now()
+  },
+  updateAt: {
     type: Date,
     default: Date.now()
   },
   lastLoginAt: {
     type: Date,
     default: Date.now()
+  },
+  role: {
+    type: Number,
+    default: 1
   }
 });
 module.exports = mongoose.model("user", userSchema);

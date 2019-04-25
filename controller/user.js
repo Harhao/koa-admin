@@ -1,4 +1,4 @@
-const userModel = require("../model/userModel.js");
+const userModel = require("../model/user.js");
 const config = require("../config/index.js");
 const util = require("../util/index");
 module.exports = {
