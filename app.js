@@ -4,15 +4,14 @@ const json = require("koa-json");
 const onerror = require("koa-onerror");
 const bodyparser = require("koa-bodyparser");
 const logger = require("koa-logger");
-const koaJwt = require("koa-jwt");
 const router = require("./routes/index");
-const config = require("./config/index");
-const util = require("./util/index");
 const errorHandle = require("./util/error.js");
+const koaJwt = require("koa-jwt");
+const config = require("./config/index");
 const filterApi = require("./config/filterApi");
+const util = require("./util/index");
 const { connect } = require("./model/init");
 onerror(app);
-
 app.use(
   bodyparser({
     enableTypes: ["json", "form", "text"]

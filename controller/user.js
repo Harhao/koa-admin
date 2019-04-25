@@ -55,7 +55,6 @@ module.exports = {
   },
   getuserinfo: async (ctx, next) => {
     const { name } = ctx.request.query;
-    console.log("name is",name);
     if (name) {
       const result = await userModel.findOne({
         name: name
