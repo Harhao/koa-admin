@@ -10,7 +10,7 @@ module.exports = {
         name: name,
         password: password,
         phone: phone
-      })
+      }).save（）
       console.log("register result is", result);
       if (!result)
         return (ctx.body = {
