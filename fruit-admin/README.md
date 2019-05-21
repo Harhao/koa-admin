@@ -1,29 +1,20 @@
-# fruit-admin
+# vue-template
 
-## Project setup
-```
+> a struct of vue project
+
+## Build Setup
+
+``` bash
+# download the project file
+git clone https://github.com/Harhao/vue-template.git
+
+# install the dependence
 npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
+# run the project
+cd vue-template
+npm run dev
+# build for production with minification
 npm run build
 ```
 
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
