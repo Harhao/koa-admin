@@ -3,8 +3,8 @@
 > 开发环境： window 10 <br/>
   编程软件：VSCode <br/>
   技术栈：koa2 Vue2 <br/>
-  数据库：MongoDB
-  客户端:小程序
+  数据库：MongoDB<br/>
+  客户端:小程序<br/>
   后台管理:VueAdmin
 
 ## 项目目录结构
