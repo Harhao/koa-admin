@@ -1,0 +1,13 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='search-box'>
+    <view class='selectCity'>
+      <text class='position'>{{position}}</text>
+      <image src='../../images/down.png' class='down'></image>
+    </view>
+    <view class='searchBtn' bindtap='search'>
+      <image src="" class='icon'></image>
+      <text>请搜索想要的水果</text>
+    </view>
+  </view>
+</view>

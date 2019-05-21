@@ -1,0 +1,53 @@
+/**index.wxss**/
+
+page {
+  background: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.container .search-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+  padding: 0rpx 40rpx;
+  font-size: 0.8rem;
+}
+
+.search-box .selectCity {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 80rpx;
+  color: #000;
+  margin-right: 10rpx;
+}
+.selectCity .position{
+  width: 90rpx;
+  font-size:0.7rem;
+}
+.selectCity .down{
+  width: 45rpx;
+  height: 40rpx;
+}
+.search-box .searchBtn {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #7c7c7c;
+  background-color: #f7f7f7;
+  border-radius: 0.3rem;
+}
+
+.searchBtn .icon {
+  width: 70rpx;
+  height: 70rpx;
+}

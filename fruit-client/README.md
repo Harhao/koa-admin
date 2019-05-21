@@ -1,21 +1,41 @@
-# fruit-client
+## fruitShop生鲜水果小程序/云开发
 
-> a fruit shop base on the vuejs
+> 采用微信小程序云开发功能开发线上水果电商小程序
+>
+> 后台环境：云开发环境
 
-## Build Setup
+### 下载
 
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
+```bash
+git clone git@github.com:Harhao/fruitShop.git
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+
+### 使用
+
+- 微信云开发小程序需要先开通云开发环境，自行了解微信云开发开通流程
+
+- 微信开发者工具直接引入项目文件夹即可
+
+- 不过project.config.json文件和app.js的云开发环境需要替换成自己的开发环境
+
+```bash
+ //app.js
+ wx.cloud.init({
+   traceUser: true,
+   env:''//这里是自己的开发环境
+ })
+  
+ // project.config.json文件
+ "appid": "wx2fce92bc6c844328",//替换成自己的appid
+```
+  
+  
+  
+  
+
+## 参考文档
+
+- [云开发文档](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)
+
